@@ -1,2 +1,6 @@
-<h1>Welcome#index</h1>
-<p>Find me in app/views/welcome/index.html.erb</p>
+<h1><%= @message %></h1>
+<p>This is a greeting from app/views/welcome/index.html.erb</p>
+
+<% @count.times do %>
+  <p><%= @bonus %></p>
+<% end %>
