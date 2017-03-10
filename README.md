@@ -6,6 +6,7 @@
 * [Site URL] [1]
 [1]: http://localhost:3000/
 
-Create a site that is functional for playing music using your Spotify account and playlists, but has the Shopify UI style
+Create a site that is functional for playing music using your Spotify account and playlists (using the [Spotify-Rails] [2] API), but has the Shopify UI style
+[2]: https://github.com/guilhermesad/rspotify
 
 Progress Status: Don't get carried away with frills... work on finishing the book _efficiently_.
