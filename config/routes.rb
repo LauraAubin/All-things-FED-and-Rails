@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
   get 'welcome' => 'welcome#index'
 
-  root to: "welcome#index"
+  get 'welcome' => 'entries#log_in'
+  post 'welcome' => 'entries#log_in'
 
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  root to: "welcome#index"
 end

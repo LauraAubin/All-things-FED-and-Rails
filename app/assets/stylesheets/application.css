@@ -16,7 +16,7 @@
 
 body {
   font-family:verdana;
-  color:#708090;
+  color:#708090; /* Gray */
   text-align: center;
 }
 
@@ -24,5 +24,12 @@ h1 {
   font-family:"Courier New", Courier, monospace;
   font-size: 24pt;
   font-weight: bold;
-  color:#F00;
+  color:#F00; /* Red */
+}
+
+login { /* Shopify public site style */
+  font-family:"Brandon", Helvetica, Arial, sans-serif;
+  font-size: 16pt;
+  font-weight: normal;
+  color:#30373b; /* Dark Gray */
 }
