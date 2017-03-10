@@ -4,3 +4,7 @@
 <% @count.times do %>
   <p><%= @bonus %></p>
 <% end %>
+
+<%= form_tag action: 'log_in', controller: 'entries' do %>
+  <%= submit_tag 'Log in' %>
+<% end %>
