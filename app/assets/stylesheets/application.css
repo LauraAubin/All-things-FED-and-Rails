@@ -26,3 +26,10 @@ h1 {
   font-weight: bold;
   color:#F00; /* Red */
 }
+
+login { /* Shopify public site style */
+  font-family:"Brandon", Helvetica, Arial, sans-serif;
+  font-size: 16pt;
+  font-weight: normal;
+  color:#30373b; /* Dark Gray */
+}
