@@ -24,7 +24,12 @@ h1 {
   font-family:"Courier New", Courier, monospace;
   font-size: 24pt;
   font-weight: bold;
-  color:#F00; /* Red */
+  color:lightCoral;
+  border: none;
+}
+
+button a {
+  text-decoration: none;
 }
 
 login { /* Shopify public site style */
