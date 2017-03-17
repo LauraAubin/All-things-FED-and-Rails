@@ -12,9 +12,12 @@
   <%= submit_tag 'Log in' %>
 <% end %>
 
-<p> Previous visitors </p>
+<p> Previous visitors: </p>
 <ul>
   <% @entries.each do |entry| %>
     <li><%= entry.name %></li>
   <% end %>
 </ul>
+
+<h1> People </h1>
+<button> <%=  link_to 'people', people_path %> </button>
