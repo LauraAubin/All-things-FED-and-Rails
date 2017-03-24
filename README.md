@@ -9,4 +9,4 @@
 Create a site that is functional for playing music using your Spotify account and playlists (using the [Spotify-Rails] [2] API), but has the Shopify UI style
 [2]: https://github.com/guilhermesad/rspotify
 
-Progress Status: Don't get carried away with frills... work on finishing the book _efficiently_.
+Progress Status: iSpotify is currently delayed until I complete the book efficiently: please stand by.
