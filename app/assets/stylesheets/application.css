@@ -27,12 +27,18 @@ body {
   border-radius: 25px;
   padding-top: 10px;
   padding-bottom: 10px;
-  width: 50%;
+  width: 45%;
   margin: 0 auto;
 }
 
 #borderParagraph.small {
   width: 20%;
+  line-height: 20px;
+}
+
+#borderParagraph.medium {
+  width: 30%;
+  line-height: 20px;
 }
 
 h1 {
