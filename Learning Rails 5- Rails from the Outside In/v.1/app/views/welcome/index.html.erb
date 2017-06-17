@@ -1,0 +1,38 @@
+<h1><%= @message %></h1>
+
+<div id = "borderParagraph">
+  <p>This is a greeting from app/views/welcome/index.html.erb</p>
+
+  <% @count.times do %>
+    <p><%= @bonus %></p>
+  <% end %>
+</div>
+
+</br>
+
+<div id = "borderParagraph">
+  <%= form_tag action: 'log_in', controller: 'entries' do %>
+    <p>Enter your name:
+    <%= text_field_tag 'visitor_name', @name %></p>
+
+    <%= submit_tag 'Log in' %>
+  <% end %></br>
+</div>
+
+</br>
+
+<div id = "borderParagraph" class = "small">
+  <p> Previous Login Visitors: </p>
+  <ol>
+    <% @entries.each do |entry| %>
+      <li><%= entry.name %></li>
+    <% end %>
+  </ol>
+</div>
+
+</br>
+
+<div id = "borderParagraph" class = "small" style = "line-height: 15px;">
+  <h1> People </h1>
+  <button> <%=  link_to 'Go to page', people_path %> </button></br></br>
+</div>
