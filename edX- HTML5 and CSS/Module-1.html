@@ -1,0 +1,72 @@
+<!-- Module 1: My first Web page
+
+DOM:
+
+Elements: pieces in the webpage
+Tags: used to organize the file, applies to content using < >
+Attributes: distinguish elements (can use a class, id)
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+All together:
+
+Let the browser know which version of HTML you are using(it matters). -->
+<!DOCTYPE html> <!-- this is for HTML5 -->
+
+<html> <!-- put everything into HTML -->
+  <head> <!-- meta information e.g.character set, style tips, page title -->
+    <body> <!-- main content of page (text, images, tables, etc...) -- >
+      <p>
+        Text to be displayed
+      </p>
+    </body>
+  </head>
+</html>
+
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+<!-- Declaring encoding: -->
+
+<!DOCTYPE html>
+<html lang="en"> <!-- language -->
+  <head>
+    <meta charset="utf-8"> <!-- character encoding -->
+  </head>
+</html>
+
+<!-- Character references: -->
+
+Symbol:   <                     >                     ' ' = non breaking space      "" = quotes
+Name:     &lt;                  &gt;                  &nbsp;                        &quot;
+Number:   &#60;                 &#62;                 &#160;                        &#34;
+Usage:    Div tag: &lt;div>     Div tag: &lt;div&gt;  Add multiple spaces in page
+
+&nbsp; <!-- no break space -->
+&amp; <!-- &
+
+Example:
+
+Want to display this: -->
+<img src="images/test.png" alt="test image">
+
+<!-- Have to write this: -->
+&lt;img src=&quot;images/test.png&quot; alt=&quot;test image&quot;&gt;
+
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Tags: -->
+
+<!doctype> <!-- document type declaration, no closing tag -->
+<html> <!-- wrap around everything (except doctype) -->
+<head> <!-- information that does not appear in the body of the work -->
+<body> <!-- content -->
+<h1> <!-- ex: title of document, or indicate outermost level in a group of nested sections -->
+<p> <!-- paragraph, rendered on newline -->
+<q> <!-- quotes -->
+<blockquote> <!-- blocked out quote -->
+<ul> <!--list ordering, unordered bullet list -->
+<ol> <!-- ordered list, numbered -->
+  <li> <!-- list item -->
+<hr> <!-- horizontal rule, line across the width of text -->
+<br> <!-- line break -->
+<pre> <!-- preformatted text -->
