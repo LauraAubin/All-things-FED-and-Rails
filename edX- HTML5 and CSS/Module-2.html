@@ -75,6 +75,70 @@ Difference between <div> and <span> tags -->
 
 <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-Difference between <b> and <strong> tags -->
+Difference between <b> and <strong> tags
 
 Bold is a style to make letters thicker.
+
+Strong also makes them thicker, but is an indication of how something should be.
+For example, urgency or instructions. -->
+
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Introduction to Images: -->
+
+<img src="example.png" alt="Example Name">
+
+<!-- src attribute: Tells us where to fetch image from.
+                - From the source file on computer
+                - From a website url
+
+alt attribute: Text alternative for image.
+
+Image formats:
+
+- JPEG : Compress well, standard, do not support transparency
+- PNG : Supports transparency and alpha channels
+- SVG : Defined mathematically and support animation. Scale to any size.
+
+Images that are not important for context on your page (such as borders/backgrounds)
+should be made using CSS and not the <img> tag.
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Hyperlinks:
+
+- Make link phrases meaningful such as using "Click here to get help", instead of
+simply "Click here".
+- Use the <a> tag (anchor element)
+  - Note that the <link> tag is used to define a link between a document and an
+    external resource (like a style sheet)
+
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+href and target attributes:
+
+href: points to the URL that the link should jump to
+target: specifies the destination where the linked URL should be opened
+    _self : in the same view
+    _blank : new tab or window (remember to inform the user of this)
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+The Media and Download Attributes:
+
+The media attribute is used to specify what kind of device the URL is optimized for.
+You provide a value for the attribute, which can be any valid media query and is a
+combination of device type and media rendering values.
+Ex,  -->
+
+<a href="https://en.wikipedia.org/wiki/Media_queries?output=print"
+media="print and (resolution:250dpi)">Print wiki page about media queries</a>
+
+<!-- This page would be optimized for printing one page (ideal) and with a resolution
+of 250 dpi.
+
+The download attributes makes a link download a file. You can specify the name of
+the file by using, (otherwise, the file name remains as it initially is) -->
+
+<a href="/assets/hello.txt" download="new-name-for-text-file">
