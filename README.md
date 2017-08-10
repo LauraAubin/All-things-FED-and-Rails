@@ -1,3 +1,6 @@
+[**Code references and help cheatsheet**](https://github.com/LauraAubin/All-things-FED-and-Rails/blob/master/Cheatsheet.md)
+<hr>
+
 # Learn-Rails
 
 **Learning Rails 5: Rails from the Outside In**  
