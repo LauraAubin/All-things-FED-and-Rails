@@ -1,13 +1,3 @@
-# Markdown:
-
-<kbd>Borders</kbd>
-
->Quotes
-
-```Block```
-
-<br>
-
 # Rails:
 
 [Basic controller action, views, and links](https://github.com/LauraAubin/All-things-FED-and-Rails/pull/7)
@@ -24,3 +14,36 @@ Testing with [errors](https://github.com/Shopify/learning_portal/pull/89/files#d
 - [Constants](https://github.com/Shopify/learning_portal/pull/110/files#diff-29778f5324b60f90ff2ed1d3bdb8c864R2) and their use in [selection components.](https://github.com/Shopify/learning_portal/pull/110/files#diff-65e76be33710d4eb74ed8c00785026d7R29)
 
 <hr>
+
+<br>
+
+# Git:
+
+**Remove your last commit:**
+- `git log` _Ensure the lastest commit is the one you want to remove
+- `Git reset --hard HEAD ~1`
+- `Git log` _Double check that reset worked
+- `Git push -f`
+
+<hr>
+
+**Branch out of date with conflicts:**
+- `git checkout master`
+- `git pull`
+- `git checkout (branch name)`
+- `git rebase master`
+- `git status`
+- `git push -f`
+
+
+<br>
+
+# Markdown:
+
+<kbd>Borders</kbd>
+
+>Quotes
+
+```Block```
+
+<br>
