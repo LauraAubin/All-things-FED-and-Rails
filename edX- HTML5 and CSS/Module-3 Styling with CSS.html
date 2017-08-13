@@ -1,0 +1,215 @@
+<!-- Module 3: Adding style with CSS
+
+Style and link tags:
+
+
+Link your css file from within application: -->
+
+<link rel="stylesheet" href="css/my_styles.css">
+
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Selectors and Declarations:
+
+
+p { color: blue }
+
+      p: selector (applies style to all p tags)
+      { color: blue }: declaration (property values)
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+CSS Properties:
+
+
+Units: px, em, %, vh
+
+Font size:
+    - xx-small, x-small, small, medium, large, x-large, xx-large.
+    - Relative sizing (relative to parent text): larger, smaller.
+
+Line height:
+    - space between rows of text.
+    - Set number without a unit to inherit from the font-size value.
+
+Text align:
+    - Does not work if text is inline (does not move to a new line when
+      used) Inline examples: --> <span>, <a>, <i>, <b>, <q>.
+    <!-- Works on block level tags such as: --> <p>, <li>, <ol>, <div>, <blockquote>.
+    <!-- - Use 'start' and 'end' instead of left and right.
+    - Justify makes all of the spaces inbetween things horizontally equal.
+
+Font family:
+    - Checks if browser supports first font, if not, goes through the list looking
+      for the next best alternative.
+
+Margin:
+    - Spacing away from immediate neighbors.
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Units:
+
+
+px:
+  - pixels
+  - may not work due to browser zooming, retina displays.
+
+em:
+  - Vertical dimensions. ONe 'em' maps to the height of one capital letter.
+  - Relative to the page base size, its parent.
+
+rem:
+  - Gets size relative to the root.
+  - Set root size with html and body selectors: -->
+
+    html, body { font-size: 20px; }
+
+<!-- %:
+  - Percentage relative to parent dimension.
+  - Parent must have an explicit width or height set.
+
+vh / vw:
+  - Viewport height and viewport width.
+  - Percentage of screen/viewport.
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Styling lists:
+
+
+list-style-type:
+      - For markers positioned on the left of a list item.
+      - (disc, circle, square, none). -->
+
+      li { list-style-type: disc; }
+
+      <!-- For ordered lists:
+        - Can choose different ways of having the numbers shown.
+        - (decimal, decimal-leading-zero, lower-roman, upper-roman, lower-alpha, upper-alpha).
+
+
+list-style-position:
+      - How close list item is positioned to the list itself.
+      - (inside, outside).
+
+
+list-style-image:
+      - Change marker on list to an image.
+      - If scaling is not accurate, try the 'background-image' property. -->
+
+      li { list-style-image: url("my_triangle.png"); }
+
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Selectors:
+
+
+Tag selector:
+      - Applies to matching tags on the page. -->
+
+      li { list-style-type: circle; }
+
+
+<!-- Id selector:
+      - Style something individually with a unique identifier. -->
+
+      #p18 { color: blue; }
+
+      <p id="p18">Text.</p>
+
+
+<!-- Class selector:
+      - Can be applied to many tags
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Combining selectors:
+
+
+Comma separated selectors:
+              - Instead of making duplicate classes, we can separate common
+                classes with a comma and style them all at the same time. -->
+
+                blockquote, q, .speech { color: red; }
+
+              <!-- - To style one of these, add an additional style: -->
+
+              .speech { font-weight: bold; }
+
+
+<!-- Specialized selectors:
+              - Two selectors of different types appearing next to each other
+                with no spacing separating them.
+              - Combining selectors.
+              - Doesn't apply to individual selectors, but only when they are
+                joined (Ex, blockquote does not get styled unless it has the
+                speech class).
+              - Can combine multiple classes. -->
+
+                blockquote.speech { font-color: green; }
+
+
+<!-- Descendant selectors
+              - If there are different ID's, but similar tags, this is used to
+                style those tags based on the ID. -->
+
+                #id1 a { color: red; }
+                #id2 a { color: blue; }
+
+
+<!-- Direct descendant selectors ( > ):
+              - Apply style to direct child. -->
+
+              #intro > a { font-size: large; }
+
+
+<!-- Everything selector (*):
+            - To make the direct children of a body styled: -->
+
+            body > * { margin-left: 10px; }
+
+            <!-- - To style the children of any paragraph text: -->
+
+            p * { text-decoration: underline; }
+
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Cascading: inheritance and precedence:
+
+
+Inheritance:
+    - All children inherit the same styles, with exceptions for margin, padding,
+      position, width, border, backgrounds...
+    - The 'inherit' value leverages inheritance from the parent to reduce
+      repetition. This is used on properties that don't inherit. (as mentioned ^)
+
+    Ex, -->
+
+    Parent CSS: padding: 40px;
+    Child CSS: padding: inherit;
+
+    <!-- - Properties associated with position, layout are not inherited.
+    - Decorative properties (borders, background images, etc) do not inherit.
+    - Most properties that begin with text- or font- inherit.
+
+
+Precedence (conflicting rules):
+
+    1 - Most Specific Rule:
+                - Ex, when styling a span inside a list, the second more specific
+                  one will be applied: -->
+
+                span { color: blue; }
+                ul li span { color: red; }
+
+    <!-- 2 - #id selector is the most specific.
+
+    3- .class selector is more specific than a tag selector.
+
+    4- Rules of the same selector that come later override those that come earlier.
+
+
+    !important, takes total precedence: -->
+
+      p { color: orange !important; }
