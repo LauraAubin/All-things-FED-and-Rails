@@ -15,6 +15,16 @@ Testing with [errors](https://github.com/Shopify/learning_portal/pull/89/files#d
 
 <hr>
 
+**Puma server:**
+- `ps aux | grep puma`
+- `kill -9 (5 digits)`
+
+**Port server:**
+- `lsof -wni tcp:(pid)` _pid = port id, most common: `3100`, `8080`_
+- `kill -9 (pid)`
+
+<hr>
+
 <br>
 
 # Git:
@@ -22,7 +32,7 @@ Testing with [errors](https://github.com/Shopify/learning_portal/pull/89/files#d
 **Remove your last commit:**
 - `git log` _Ensure the lastest commit is the one you want to remove
 - `Git reset --hard HEAD ~1`
-- `Git log` _Double check that reset worked
+- `Git log` _Double check that the reset worked_
 - `Git push -f`
 
 <hr>
@@ -35,6 +45,37 @@ Testing with [errors](https://github.com/Shopify/learning_portal/pull/89/files#d
 - `git status`
 - `git push -f`
 
+<hr>
+
+**Add more to an existing commit:**
+- `git commit . --amend`
+
+<hr>
+
+**Restart your branch completely:**
+- `git reset --hard` _Will remove any unstaged changes_
+- `git pull`
+
+<hr>
+
+**Quick commit with message from terminal:**
+- `git commit -a`
+- `i` _Insert characters_
+- `Shift ;` _To stop `i`_
+- `Esc`
+- `wq`
+- `git push`
+- `dev open pr`
+
+<hr>
+
+**Stashing:**
+- `git stash`  
+- `git stash list`
+- `git stash apply` _Most recent stash_
+- `git stash apply stash@{#}`
+
+<hr>
 
 <br>
 
@@ -45,5 +86,7 @@ Testing with [errors](https://github.com/Shopify/learning_portal/pull/89/files#d
 >Quotes
 
 ```Block```
+
+<sup>Small text<sup>
 
 <br>
