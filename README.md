@@ -1,4 +1,7 @@
-[**Code references and help cheatsheet**](https://github.com/LauraAubin/All-things-FED-and-Rails/blob/master/Cheatsheet.md)
+## Cheatsheet links:
+- [**Rails code references**](https://github.com/LauraAubin/All-things-FED-and-Rails/blob/master/Ruby%20on%20Rails%20Cheatsheet.md)
+- [**Git cheatsheet**](https://github.com/LauraAubin/All-things-FED-and-Rails/blob/master/Git%20Cheatsheet.md)
+- [**Markdown**](https://github.com/LauraAubin/All-things-FED-and-Rails/blob/master/Markdown%20Cheatsheet.md)
 <hr>
 
 # Learn-Rails
