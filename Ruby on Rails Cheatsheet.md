@@ -28,4 +28,16 @@ Force a space in a view using `&nbsp;`.
 
 <hr>
 
+## Steps to update a gem safely:
+
+- Check the version change: _(major changes, minor, and patch versions (m, n, p))_.
+- Look at the changelog on Github _(conflicting changes)_.
+- Look at the gemfile.
+- On the Github browser address: … compare/v1.3.0...v1.3.1 _(compare versions to check the changes)_.
+- Run `“bundle update name_of_gem”`.
+- Run tests to see if anything broke.
+- Commit this change and open a separate PR _(gem changes are easier to revert if in a separate PR)_.
+
+- [Example gem uses in U2](https://services.shopify.io/dependencies/u2/production?type=gem#).
+
 <br>
