@@ -48,4 +48,13 @@
 
 <hr>
 
+**Stage all edited files for commit:**
+- `git add .`
+
+<hr>
+
+**Checkout someone else's branch:**
+- `git fetch origin master`
+- `git checkout [name of branch]`
+
 <br>
