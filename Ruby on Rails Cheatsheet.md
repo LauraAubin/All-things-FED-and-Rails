@@ -28,6 +28,11 @@ Force a space in a view using `&nbsp;`.
 
 <hr>
 
+**See all available routes:**
+- `rake routes | grep [controller name]`
+
+<hr>
+
 ## Steps to update a gem safely:
 
 - Check the version change: _(major changes, minor, and patch versions (m, n, p))_.
