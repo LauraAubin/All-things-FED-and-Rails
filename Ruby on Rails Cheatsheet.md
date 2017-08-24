@@ -8,6 +8,10 @@ Testing with [errors](https://github.com/Shopify/learning_portal/pull/89/files#d
 
 Force a space in a view using `&nbsp;`.
 
+Create a [past sessions](https://github.com/Shopify/learning_portal/pull/30) table using objects where _past_ is denoted by a time scope in the object's model.
+
+Create a [group of attributes](https://github.com/Shopify/u2/pull/1261/files#diff-9656a3d1559c620b44e450a59ce066bfR65) from a collection of objects of the same object type.
+
 <hr>
 
 ### Learning Portal Experience Levels:
@@ -33,8 +37,8 @@ Force a space in a view using `&nbsp;`.
 
 <hr>
 
-## Steps to update a gem safely:
-
+**Steps to update a gem safely**:
+<br>
 - Check the version change: _(major changes, minor, and patch versions (m, n, p))_.
 - Look at the changelog on Github _(conflicting changes)_.
 - Look at the gemfile.
@@ -44,5 +48,3 @@ Force a space in a view using `&nbsp;`.
 - Commit this change and open a separate PR _(gem changes are easier to revert if in a separate PR)_.
 
 - [Example gem uses in U2](https://services.shopify.io/dependencies/u2/production?type=gem#).
-
-<br>
