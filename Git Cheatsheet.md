@@ -57,4 +57,24 @@
 - `git fetch origin master`
 - `git checkout [name of branch]`
 
+<hr>
+
+**Heroku:**
+
+- Get access to Heroku from [Okta](https://shopify.okta.com/app/UserHome#).
+- Run `brew install heroku`
+
+To make someone an admin:
+- `heroku login --sso`
+- Enter your organization name: `shopify`
+- `heroku run`
+- `heroku run rails console --app shopify-[name of app]`
+- `user=User.find_by(email:"firstName.LastName@shopify.com")`
+- `user.is_admin=true`
+- `user.save` 
+
+To access the production database:
+- Login to Shopify
+- `heroku run rails console --app u2-cedar --sandbox` _u2 sandbox example_.
+
 <br>
