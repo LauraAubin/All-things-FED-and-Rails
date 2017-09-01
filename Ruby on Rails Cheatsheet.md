@@ -48,3 +48,20 @@ Create a [group of attributes](https://github.com/Shopify/u2/pull/1261/files#dif
 - Commit this change and open a separate PR _(gem changes are easier to revert if in a separate PR)_.
 
 - [Example gem uses in U2](https://services.shopify.io/dependencies/u2/production?type=gem#).
+
+<hr>
+
+**Differences: Array vs SQL**:<br>
+<sup>In connection to [this issue](https://github.com/Shopify/u2/issues/1538#event-1227815311) replacing _uniq_ with _distinct_.</sup>
+
+Arrays:
+- `newsfeed.uniq.sort_by(&:created_at)`
+- `params[:team][:user_ids] = (user_ids + lead_ids).uniq if lead_ids.present?`
+- `team_total('Engineering').uniq.count`
+- `groups = LicenseRequest.pluck(:name).uniq`
+- `User.where(id: self.health_check_responses.pluck(:user_id).uniq)`
+
+SQL query:
+- `Skill.uniq.order(:category).pluck(:category)`
+- `User.joins(:teams).where(teams: {id: @team.subtree_ids}).distinct`
+
