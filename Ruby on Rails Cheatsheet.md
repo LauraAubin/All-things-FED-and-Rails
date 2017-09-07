@@ -65,3 +65,25 @@ SQL query:
 - `Skill.uniq.order(:category).pluck(:category)`
 - `User.joins(:teams).where(teams: {id: @team.subtree_ids}).distinct`
 
+<hr>
+
+**Virtual Attributes:** <sup>[Ruby doc](http://ruby-doc.com/docs/ProgrammingRuby/html/tut_classes.html#UC)</sup>
+
+- Use attribute methods with no corresponding instance variable
+
+```
+class User
+
+  def method
+    @var/5   # force floating point
+  end
+  
+  def method=(value)
+    @var = (value*5).to_i
+  end
+end
+
+instance = User.new(12)
+instance.method	»	2.4
+instance.var »	60
+```
