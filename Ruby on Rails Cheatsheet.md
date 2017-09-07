@@ -69,13 +69,13 @@ SQL query:
 
 **Virtual Attributes:** <sup>[Ruby doc](http://ruby-doc.com/docs/ProgrammingRuby/html/tut_classes.html#UC)</sup>
 
-- Use attribute methods with no corresponding instance variable
+- Use attribute methods with no corresponding instance variable.
 
 ```
 class User
 
   def method
-    @var/5   # force floating point
+    @var/5  # force floating point
   end
   
   def method=(value)
@@ -84,6 +84,6 @@ class User
 end
 
 instance = User.new(12)
-instance.method	»	2.4
-instance.var »	60
+instance.method	» 2.4
+instance.var » 60
 ```
