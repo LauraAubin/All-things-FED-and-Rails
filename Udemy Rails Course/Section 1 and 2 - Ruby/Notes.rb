@@ -33,6 +33,7 @@ end
 # -------------------------------------------
 
 # Console: irb
+# Separate new lines in irb with ';' so you can write on one line.
 item.class # prints item type
 item.methods # prints item methods
 nil.nil? # true
@@ -85,6 +86,9 @@ a.join # "123"
 a.join(' ') #=> "1 2 3"
 a.join('-') #=> "1-2-3"
 
+some_array = [1,2,3,4,5,6]
+some_array.select(&:even?)
+some_array.select{|number| number.even?} # Same as ^
 
 # -------------------------------------------
 # HASHES
@@ -200,7 +204,7 @@ user.module_method # accessible from user because of the "include"
     a + b
   end
   pair = [3, 7]
-  method *pair #=> 7
+  method *pair #=> 10
 
   # ARRAY DESTRUCTURING
   first, *list = [1,2,3,4] # first = 1, list = [2,3,4]
