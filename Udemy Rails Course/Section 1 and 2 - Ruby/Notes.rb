@@ -62,7 +62,7 @@ a.include?(something) # Checks if something is in the array
 a.shuffle # shuffle array
 a = (0..99).to_a.shuffle! # create array, of random numbers, from 0 -> 100
 a << 25 # add 25 to the end of the array
-a.push(25) # add to array
+a.push(25) # add to end of array
 a.unshift(25) # add 25 to the beginning of the array
 a.pop # remove last element in array
 a.unique # removes duplicates
