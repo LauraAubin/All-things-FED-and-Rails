@@ -24,7 +24,7 @@
 <hr>
 
 **Restart your branch completely:**
-- `git checkout -f` undo all changes<br>
+- `git checkout -f` _Undo all changes_<br>
 _or,_<br>
 - `git reset --hard` _Will remove any unstaged changes_
 - `git pull`
@@ -79,7 +79,7 @@ To access the production database:
 - Login to Shopify
 - `heroku run rails console --app u2-cedar --sandbox` _u2 sandbox example_.
 
-<br>
+<hr>
 
 **Delete a folder or file:**
 - `rm -rf <name>`
