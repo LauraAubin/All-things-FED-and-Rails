@@ -15,7 +15,7 @@
     # Model sends back data to Controller
     # Controller renders view
 
-get 'wecome/home', to: 'welcome#home'
+get 'welcome/home', to: 'welcome#home'
 # Browser route 'welcome/home' directed to the welcome controller,
 # home action.
 
@@ -25,6 +25,19 @@ class WelcomeController < ApplicationController
 def home
 # Controller action method
 
-# Template app/views/welcome/home.html.erb
+Template: # app/views/welcome/home.html.erb
 
-#rake routes: see all available routes
+rake routes: # see all available routes
+
+root route:
+    # Before:
+    get 'welcome/home', to: 'welcome#home'
+    get 'welcome/about', to: 'welcome#about'
+    # <%= link_to 'Home', welcome_home_path %>
+    # <%= link_to 'About', welcome_about_path %>
+
+    # After:
+    root 'welcome#home'
+    get 'about', to: 'welcome#about'
+    # <%= link_to 'Home', root_path %>
+    # <%= link_to 'About', about_path %>
