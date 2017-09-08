@@ -24,6 +24,8 @@
 <hr>
 
 **Restart your branch completely:**
+- `git checkout -f` undo all changes<br>
+_or,_<br>
 - `git reset --hard` _Will remove any unstaged changes_
 - `git pull`
 
@@ -78,3 +80,6 @@ To access the production database:
 - `heroku run rails console --app u2-cedar --sandbox` _u2 sandbox example_.
 
 <br>
+
+**Delete a folder or file:**
+- `rm -rf <name>`
