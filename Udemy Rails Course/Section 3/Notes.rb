@@ -25,4 +25,6 @@ class WelcomeController < ApplicationController
 def home
 # Controller action method
 
-# Template
+# Template app/views/welcome/home.html.erb
+
+#rake routes: see all available routes
