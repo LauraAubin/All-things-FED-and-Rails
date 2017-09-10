@@ -83,3 +83,8 @@ To access the production database:
 
 **Delete a folder or file:**
 - `rm -rf <name>`
+
+<hr>
+
+**See hidden files:**
+- `ls -la`
