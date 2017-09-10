@@ -87,3 +87,18 @@ instance = User.new(12)
 instance.method	» 2.4
 instance.var » 60
 ```
+
+<hr>
+
+**Login as a different user:**
+
+Helper:
+```
+def login_as(user)
+   @controller.stubs(:current_user).returns(user)
+end
+```
+
+```
+login_as(users(user))
+```
