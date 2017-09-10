@@ -32,6 +32,22 @@ def home
 
 Template: # app/views/welcome/home.html.erb
 
+# Create model with a scaffold
+rails generate scaffold Article title:string description:text
+  # Migration file for table
+  # Article model
+  # Test
+  # Routes
+rake db:migrate
+
+# Controller successful save notice (not a flash)
+format.html { redirect_to @object, notice: 'Notice text.' }
+
+
+# -------------------------------------------
+# ROUTING
+# -------------------------------------------
+
 rake routes: # see all available routes
 
 root route:
@@ -47,16 +63,25 @@ root route:
     # <%= link_to 'Home', root_path %>
     # <%= link_to 'About', about_path %>
 
-# Create model with a scaffold
-rails generate scaffold Article title:string description:text
-  # Migration file for table
-  # Article model
-  # Test
-  # Routes
-rake db:migrate
+Resources: # supplies all routes for index, show, new, edit, create, update and destroy actions.
 
-# Controller successful save notice (not a flash)
-format.html { redirect_to @object, notice: 'Notice text.' }
+# HTTP CONTROLLER ACTIONS:
+  # GET: index, new, show, edit
+  # POST: create
+  # PATCH/PUT: update
+  # DELETE: destroy
+
+# Routes matched in order specified. Move anything above the resources if taking priority.
+
+# Sometimes you want to show a profile page without referencing an ID for the user.
+get 'profile', to: :show, controller: 'users' # (instead of URL profile/:id).
+  # Specify 'show' action in controller 'users'.
+
+# CONTROLLER NAMESPACES:
+namespace :admin do
+  resources :articles, :comments
+end
+# Controllers placed under 'app/controller/admin'
 
 
 # -------------------------------------------
