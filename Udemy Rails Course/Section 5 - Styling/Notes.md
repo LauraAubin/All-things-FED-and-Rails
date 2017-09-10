@@ -19,6 +19,8 @@ Bootstrap already styles its components, but you can change these styles from th
 - Above the import statements, change specific bootstrap styles.
      - Ex, `$navbar-default-bg: #e6e5ff;` will change the navbar background color.
 
+<hr>
+
 **FOOTER:**
 - Render a partial from application.
 - Right element:
@@ -37,8 +39,12 @@ footer ul li {
 }
 ```
 
+<hr>
+
 **SYMBOL:**
 - Copyright `&copy;` in html.erb.
+
+<hr>
 
 **RUBY:**
 - `pluralize(@object.errors.count, "error")` Will pluralize "error" if there is more than one.
