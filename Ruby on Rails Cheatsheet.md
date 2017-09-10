@@ -92,13 +92,14 @@ instance.var » 60
 
 **Login as a different user:**
 
-Helper:
+[Helper:](https://github.com/ShopifyFRS/bourgeois/blob/d97d888955f92dbe4bc748daffcafaf61e911a1c/test/test_helper.rb#L81-L83)
 ```
 def login_as(user)
    @controller.stubs(:current_user).returns(user)
 end
 ```
 
+[Use:](https://github.com/ShopifyFRS/bourgeois/blob/7b71578296bff3af64b31949e934e4baa2ff8b93/test/controllers/internal/financings_controller_test.rb#L49)
 ```
 login_as(users(user))
 ```
