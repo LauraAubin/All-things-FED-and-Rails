@@ -286,3 +286,31 @@ Before_save {self.email = email.downcase }
 # 'has_secure_password' method in model (user.rb).
 # One way hashed digest of string entered as password.
 # Use 'resource.Authenticate('password')' to compare passwords.
+
+
+# -------------------------------------------
+# SESSIONS
+# -------------------------------------------
+
+# To access methods from a view.
+# Inside of 'ApplicationController'.
+
+helper_method :current_user, :logged_in?
+
+def current_user
+  # User_id backed by browser from session hash.
+  @current_user ||= User.find(session[:user_id]) if session[:user_id]
+end
+
+def logged_in?
+  # Convert to boolean.
+  !!current_user
+end
+
+def require_user
+  # If not logged in.
+  if !logged_in?
+    # Flash something to the user view.
+    redirect_to root_path.
+  end
+end
