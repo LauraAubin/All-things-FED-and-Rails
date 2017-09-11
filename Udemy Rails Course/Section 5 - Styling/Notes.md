@@ -52,3 +52,11 @@ footer ul li {
 - Build error messaging into a partial.
     - Inside partial: `@object` -> "obj"
     - Rendering partial: `<%= render 'folder/partial', obj: @object %>`
+    - This can be used to render partials from associated views. Ex, you can render an articles view from a users show but using `obj: @user.articles`.
+
+<hr>
+
+**PAGINATION:**
+- `gem 'will_paginate'`.
+- Index: `@articles = Article.paginate(page: params[:page], per_page: 5)`.
+- Index view: `<%= will_paginate %>` before render show.

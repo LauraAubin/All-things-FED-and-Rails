@@ -64,8 +64,6 @@ root route:
     # <%= link_to 'About', about_path %>
 
 Resources: # supplies all routes for index, show, new, edit, create, update and destroy actions.
-# Create routes for users controller except for the new action.
-resources :users. except: [:new]
 
 # HTTP CONTROLLER ACTIONS:
   # GET: index, new, show, edit
@@ -74,6 +72,11 @@ resources :users. except: [:new]
   # DELETE: destroy
 
 # Routes matched in order specified. Move anything above the resources if taking priority.
+
+# Create route to create new user via the signup page.
+get 'signup', to: 'users#new'
+# Create routes for users controller except for the new action.
+resources :users. except: [:new]
 
 # Sometimes you want to show a profile page without referencing an ID for the user.
 get 'profile', to: :show, controller: 'users' # (instead of URL profile/:id).
