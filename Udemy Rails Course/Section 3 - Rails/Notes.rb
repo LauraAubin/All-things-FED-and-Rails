@@ -64,6 +64,8 @@ root route:
     # <%= link_to 'About', about_path %>
 
 Resources: # supplies all routes for index, show, new, edit, create, update and destroy actions.
+# Create routes for users controller except for the new action.
+resources :users. except: [:new]
 
 # HTTP CONTROLLER ACTIONS:
   # GET: index, new, show, edit

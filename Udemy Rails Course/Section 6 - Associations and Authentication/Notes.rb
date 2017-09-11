@@ -3,7 +3,7 @@
 # Associations and Authentication
 # -------------------------------------------
 
-#http://guides.rubyonrails.org/association_basics.html
+# http://guides.rubyonrails.org/association_basics.html
 
 # Foreign key: Object stores a 'user_id', references the user who created the object.
 # Has association between the tables.
