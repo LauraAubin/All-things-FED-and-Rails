@@ -60,3 +60,16 @@ footer ul li {
 - `gem 'will_paginate'`.
 - Index: `@articles = Article.paginate(page: params[:page], per_page: 5)`.
 - Index view: `<%= will_paginate %>` before render show.
+
+**LOGIN/LOGOUT:**
+- `get 'login', to: 'sessions#new'`.
+- `post 'login', to: 'sessions#create'`.
+- `delete 'logout', to: 'sessions#destroy'`.
+- Create sessions controller.
+- Build login form (sessions new).
+   - `<%= form_for(:session, :html => {role: "form"}, url: login_path) do |f| %>`. Direct/post the url to the login_path.
+- From the login create form, `params[:session]` shows you available params entered upon create.
+    - Ex, `params[:session][:email]` gives you the entered email.
+    - Create in sessions controller: `user = User.find_by(email: params[:session][:email].downcase)`.
+    - `if user && user.authenticate(params[:session][:password])` then success & `session[:user_id] = user.id` (save session using browser cookies). Else, `render 'new'` & `flash.now` since there has been no new page requests.
+- From destroy/logout (`<%= link_to 'Log out', logout_path, method: :delete %>`), destroy session user and redirect. `session[:user_id] = nil` & `redirect_to root_path`.
