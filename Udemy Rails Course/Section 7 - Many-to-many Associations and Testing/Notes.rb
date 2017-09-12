@@ -5,6 +5,7 @@
 
 # has_many through:
 # Can have a users table, comments, and a usersComments table.
+# Can have the association between the two, but can also store the associations themselves.
 
 # -------------------------------------------
 # ERRORS
@@ -69,7 +70,7 @@ assert_select "a[href=?]", user_path(@user), text: @user.name
 
 
 # -------------------------------------------
-# ADMIN TEST
+# ADMIN TESTS
 # -------------------------------------------
 
 # Test, should redirect create when admin not logged in
@@ -85,3 +86,27 @@ def sign_in_as(user, password)
   # Simulate a user signing in:
   post login_path session: {email: user.email, password: password}
 end
+
+
+# -------------------------------------------
+# CHECKBOX UI
+# -------------------------------------------
+
+# Bootstrap (Ruby in views syntax)
+# Displays a bunch of checkboxes.
+f.collection_check_boxes :category_ids, Category.all, :id, :name do |cb|
+  cb.label(class: "checkbox-inline input_checkbox") {cb.check_box(class: "checkbox") + cb.text}
+end
+
+# When we submit create for a new @article, our category params are going to be included:
+# Allow params for `category_ids: []`, an array.
+@article.categories # All categories associated with this article, selected from the checkboxes.
+
+# VIEW
+if @articles.categories.any?
+  <p>Categories render @article.categories </p># Will render all categories automatically.
+end
+
+# Categories _categorie partial
+# Use span tag
+link_to category.name, category_path(category) &nbsp;
