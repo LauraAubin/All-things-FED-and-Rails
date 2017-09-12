@@ -49,6 +49,8 @@ end
 # User:
 has_many: :comments # has this many associations, 'comments' is pluralized.
 
+# Whatever comments the user has, it will destroy all of them if they are deleted.
+has_many :comments, dependent: :destroy
 
 # -------------------------------------------
 # HAS_MANY :through
@@ -312,5 +314,24 @@ def require_user
   if !logged_in?
     # Flash something to the user view.
     redirect_to root_path.
+  end
+end
+
+# Can be used in a controller method:
+def ...
+  redirect_to articles_path if logged_in?
+end
+
+# RESTRICT ACTIONS FROM CONTROLLER:
+
+# From articles controller, when needing to be logged in:
+before_action :require_user, except: [:index, :show]
+
+# Only show pages that the user created:
+before_action :require_same_user, only: [:edit, :update, :destroy]
+def require_same_user
+  if current_user != @article.user
+    # Notify user
+    redirect_to root_path
   end
 end
