@@ -73,6 +73,11 @@ Resources: # supplies all routes for index, show, new, edit, create, update and 
 
 # Routes matched in order specified. Move anything above the resources if taking priority.
 
+# Create route to create new user via the signup page.
+get 'signup', to: 'users#new'
+# Create routes for users controller except for the new action.
+resources :users. except: [:new]
+
 # Sometimes you want to show a profile page without referencing an ID for the user.
 get 'profile', to: :show, controller: 'users' # (instead of URL profile/:id).
   # Specify 'show' action in controller 'users'.
