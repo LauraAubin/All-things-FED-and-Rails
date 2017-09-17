@@ -56,8 +56,10 @@ _or,_<br>
 <hr>
 
 **Checkout someone else's branch:**
-- `git fetch origin master`
-- `git checkout [name of branch]`
+- `git checkout origin/[branch name]`
+- `git checkout master`
+- `git fetch origin [branch name]`
+- `git checkout [branch name]`
 
 <hr>
 
