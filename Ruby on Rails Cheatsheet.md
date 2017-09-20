@@ -34,6 +34,7 @@ Create a [group of attributes](https://github.com/Shopify/u2/pull/1261/files#dif
 
 **See all available routes:**
 - `rake routes | grep [controller name]`
+- Example: `bin/rake routes | grep capital` will show all available routes for the Capital controller.
 
 <hr>
 
@@ -103,3 +104,8 @@ end
 ```
 login_as(users(user))
 ```
+<hr>
+
+**Update cache files:**<br>
+<sup>Used when updating the vedor/cache files for qless on [Bourgeois](https://github.com/ShopifyFRS/bourgeois/pull/3207).</sup>
+- `bundle package —all` 
