@@ -8,6 +8,14 @@
 
 <hr>
 
+**Remove changes on a file:**<br>
+<sup>This was used in a PR in which changes to a file no longer needed to be included.</sup>
+- `git checkout -- [full file path ending with file name]`.
+
+- If the above does not work, try `git checkout origin/master` as the source.
+
+<hr>
+
 **Branch out of date with conflicts:**
 - `git checkout master`
 - `git pull`
