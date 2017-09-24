@@ -26,8 +26,9 @@
 
 <hr>
 
-**Add more to an existing commit:**
-- `git commit . --amend`
+**Add more changes to an existing pushed commit:**<br>
+<sup>This will not appear as a new commit.</sup><br>
+- `git commit —amend —no-edit`
 
 <hr>
 
