@@ -109,3 +109,11 @@ login_as(users(user))
 **Update cache files:**<br>
 <sup>Used when updating the vedor/cache files for qless on [Bourgeois](https://github.com/ShopifyFRS/bourgeois/pull/3207).</sup>
 - `bundle package —all` 
+
+<hr>
+
+**Generate a job skeleton:**
+
+In the console:
+- `generate job`
+- `bundle exec rails g job NameOfJob`
