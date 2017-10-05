@@ -117,3 +117,22 @@ login_as(users(user))
 In the console:
 - `generate job`
 - `bundle exec rails g job NameOfJob`
+
+<hr>
+
+**OOP Ancestry:**<br>
+<sup>Ancestors: All methods that are accessible from scope.</sup>
+
+For example, you can't use the `sum` method on a [single OfferGroup](https://github.com/ShopifyFRS/bourgeois/pull/3361/files#diff-43aafddaf06d25aee6df380422d1ec32R127). The [sum method is enumerable](https://apidock.com/rails/Enumerable/sum).
+
+Test:
+
+- `OfferGroup.ancestors.include? Enumerable` >> false
+- `Array.ancestors.include? Enumerable` >> true
+- `[].class.ancestors.include? Enumerable` >> true
+     - `[].class` is an instance of Array.
+     
+Solution:
+
+- Put `published_groups` of type OfferGroup in an array to [make it enumerable](https://github.com/ShopifyFRS/bourgeois/pull/3361/files#diff-3d8a4e51deeec5e0d5e4aa218f9253b6R14) like `[published_groups]`.
+
