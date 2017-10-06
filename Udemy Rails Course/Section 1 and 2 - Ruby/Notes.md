@@ -1,32 +1,39 @@
-# -------------------------------------------
 # SECTION 2
-# Ruby programming language
+## Ruby programming language
 
-# Ruby style guide: https://github.com/bbatsov/ruby-style-guide
-# -------------------------------------------
+[Ruby style guide](https://github.com/bbatsov/ruby-style-guide)
 
-# print
-puts "Hello World"
+<hr>
 
-# string
-hello = "Hello World"
-puts hello
+Print: `puts "Hello World"`
 
-# method
+String: 
+- `hello = "Hello World"`
+- `puts hello`
+
+Method:
+
+```
 def hello
   puts "Hello World"
 end
 hello
+```
 
+```
 def hello(argument)
   puts argument
 end
+```
 
-# break an if statement
+Break an if statement:
+
+```
 a = gets.chomp
 if a != "continue"
   break
 end
+```
 
 # -------------------------------------------
 # NUMBERS & STRINGS
