@@ -2,7 +2,7 @@
 
 **Remove your last commit:**
 - `git log` _Ensure the lastest commit is the one you want to remove
-- `Git reset --hard HEAD ~1`
+- `Git reset --hard HEAD~1`
 - `Git log` _Double check that the reset worked_
 - `Git push -f`
 
@@ -29,6 +29,12 @@
 **Add more changes to an existing pushed commit:**<br>
 <sup>This will not appear as a new commit.</sup><br>
 - `git commit --amend --no-edit`
+
+or,
+
+- `git rebase -i HEAD~2` _Rebase the last 2 commits_
+- _f squash the most recent commit_
+- `git push origin +branch_name`
 
 <hr>
 
