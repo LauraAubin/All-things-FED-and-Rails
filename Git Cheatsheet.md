@@ -33,7 +33,7 @@
 or,
 
 - `git rebase -i HEAD~2` _Rebase the last 2 commits_
-- _f squash the most recent commit_
+- `f` fixup the most recent commit, this will discard the commit message_
 - `git push origin +branch_name`
 
 <hr>
