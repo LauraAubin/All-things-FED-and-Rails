@@ -38,6 +38,18 @@ or,
 
 <hr>
 
+**Rebase with master:**
+
+- Checkout master and pull so that master is up to date.
+- Checkout your branch.
+- `git fetch origin master`
+- `git rebase -i origin/master`
+- `git push origin +your_branch_name`<br>
+or 
+- `git push origin head`
+
+<hr>
+
 **Restart your branch completely:**
 - `git checkout -f` _Undo all changes_<br>
 _or,_<br>
