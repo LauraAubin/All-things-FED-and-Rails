@@ -1,146 +1,176 @@
-# -------------------------------------------
 # SECTION 2
-# Ruby programming language
+## Ruby programming language
 
-# Ruby style guide: https://github.com/bbatsov/ruby-style-guide
-# -------------------------------------------
+[Ruby style guide](https://github.com/bbatsov/ruby-style-guide)
 
-# print
-puts "Hello World"
+<hr>
 
-# string
-hello = "Hello World"
-puts hello
+Print: `puts "Hello World"`
 
-# method
+String: 
+- `hello = "Hello World"`
+- `puts hello`
+
+Method:
+
+```
 def hello
   puts "Hello World"
 end
 hello
+```
 
+```
 def hello(argument)
   puts argument
 end
+```
 
-# break an if statement
+Break an if statement:
+
+```
 a = gets.chomp
 if a != "continue"
   break
 end
+```
 
-# -------------------------------------------
-# NUMBERS & STRINGS
-# -------------------------------------------
+<hr>
 
-# Console: irb
-# Separate new lines in irb with ';' so you can write on one line.
-item.class # prints item type
-item.methods # prints item methods
-nil.nil? # true
-# Variables point to assignment of variables
-"#{var}" # String interpolation
-# Enter quote \, escape quote /
-"".empty? # true
-gets.chomp # Get string input from user
-var.reverse # reverses a string
-var.count # count how many characters in the string
-20/3.to_f # convert int to float
-5.to_s # convert object to string
-20 % 3 # = 2, mod, remainder
-22.odd? # false
-rand(10) # random number between 0 and 10, exclusive (without 10)
-"string: #{number * 10}" # Avoid adding a string to an int like this
-a.capitalize # capitalize string
-"string".methods # displays methods available for the string object
+## Numbers and Strings:
 
+- Console: `irb`
+- Separate new lines in irb with ';' so you can write on one line.
+- `item.class` _Prints item type._
+- `item.methods` _Prints item methods._
+- `nil.nil?` _True._
+- Variables point to assignment of variables.
+- `"#{var}"` _String interpolation._
+- Enter quote `\`, escape quote `/`.
+- `"".empty?` _True._
+- `gets.chomp` _Get string input from user._
+- `var.reverse` _Reverses a string._
+- `var.count` _Count how many characters in the string._
+- `20/3.to_f` _Convert int to float._
+- `5.to_s` _Convert object to string._
+- `20 % 3 # = 2` _Mod = remainder._
+- `22.odd?` _False._
+- `rand(10)` _Random number between 0 and 10, exclusive (without 10)._
+- `"string: #{number * 10}"` _Avoid adding a string to an int like this._
+- `a.capitalize` _Capitalize string._
+- `"string".methods` _Displays methods available for the string object._
 
-# -------------------------------------------
-# ARRAYS
-# -------------------------------------------
+<hr>
 
-a.include?(something) # Checks if something is in the array
-a.shuffle # shuffle array
-a = (0..99).to_a.shuffle! # create array, of random numbers, from 0 -> 100
-a << 25 # add 25 to the end of the array
-a.push(25) # add to end of array
-a.unshift(25) # add 25 to the beginning of the array
-a.pop # remove last element in array
-a.unique # removes duplicates
-! # save
-a.unique! # removes duplicates and saves array
-a.each {[i] puts i} # loop, iterate whole array, print each, returns whole array at end
+## Arrays:
 
-    a.each do |x|
-      puts ": #{{x}}"
-    end
+- `a.include?(something)` _Checks if something is in the array._
+- `a.shuffle` _Shuffle array._
+- `a = (0..99).to_a.shuffle!` _Create array of random numbers, from 0 -> 100._
+- `a << 25` _Add 25 to the end of the array._
+- `a.push(25)` _Add to end of array._
+- `a.unshift(25)` _Add 25 to the beginning of the array._
+- `a.pop` _Remove last element in array._
+- `a.unique` _Removes duplicates._
+- `!` _Save._
+- `a.unique!` _Removes duplicates and saves array._
+- `a.each {[i] puts i}` _Loop, iterate whole array, print each, returns whole array at end._
 
-    # or
-
-    a.each { |x| puts ": #{x}" }
-
-a.select { |x| x.odd? } # loops through the array, selects only x that are odd
-a.each { |x| print number if x.odd? } # another way to get only odd numbers
-
-a = ["1", "2", "3"] # Array of strings
-a.join # "123"
-a.join(' ') #=> "1 2 3"
-a.join('-') #=> "1-2-3"
-
-some_array = [1,2,3,4,5,6]
-some_array.select(&:even?)
-some_array.select{|number| number.even?} # Same as ^
-
-# -------------------------------------------
-# HASHES
-# -------------------------------------------
-
-# keys and values
-hash = {'a' => '1', 'b' => '2'} # keys (a, b) & values (1, 2)
-
-hash = {a: 1, b: 2, c: 3} #=> {:a=>1, :b=>2, :c=>3}
-hash[:c] #=> 3
-hash[:d] = 7 # adds to the hash, {:a=>1, :b=>2, :c=>3, :d=>7}
-hash.delete(:b) # removes b entry from key, {:a=>1, :c=>3, :d=>7}
-hash.each { |k, v| puts v } #=> 1, 3, 7
-hash.each { |k, v| hash.delete(k) if v > 3 } #=> 1, 3
-hash.select { |k, v| v.odd? } #=> 1, 3, 7
-a.include?(b) # check if b exists in a
-
-def get_value_with_key(hash, key)
-  hash[key]
+```
+a.each do |x|
+   puts ": #{{x}}"
 end
+```
 
+or
 
-# -------------------------------------------
-# OBJECT ORIENTED PROGRAMMING
-# -------------------------------------------
+```
+a.each { |x| puts ": #{x}" }
+```
 
-User.ancestors # inheritance, all super classes of user
-@name # instance variable, exists with object
+<br>
 
+- `a.select { |x| x.odd? }` _Loops through the array, selects only x that are odd._
+- `a.each { |x| print number if x.odd? }` _Another way to get only odd numbers._
 
-    module Modulable # naming convention ends with "able"
-      def module_method(object)
-      end
+<br>
+
+- `a = ["1", "2", "3"]` _Array of strings._
+- `a.join` _"123"_
+- `a.join(' ')` _"1 2 3"_
+- `a.join('-')` _"1-2-3"_
+
+<br>
+
+`some_array = [1,2,3,4,5,6]`
+
+`some_array.select(&:even?)`
+
+or 
+
+`some_array.select{|number| number.even?}`
+
+<hr>
+
+## Hashes:
+
+- `hash = {'a' => '1', 'b' => '2'}` _Keys (a, b) & values (1, 2)._
+
+- `hash = {a: 1, b: 2, c: 3}` _{:a=>1, :b=>2, :c=>3}_
+- `hash[:c]` _3_
+- `hash[:d] = 7` _Adds to the hash, {:a=>1, :b=>2, :c=>3, :d=>7}._
+- `hash.delete(:b)` _Removes b entry from key, {:a=>1, :c=>3, :d=>7}._
+- `hash.each { |k, v| puts v }` _1, 3, 7._
+- `hash.each { |k, v| hash.delete(k) if v > 3 }` _1, 3._
+- `hash.select { |k, v| v.odd? }` _1, 3, 7._
+- `a.include?(b)` _Check if b exists in a._
+
+<br>
+
+```
+def get_value_with_key(hash, key)
+    hash[key]
+end
+```
+
+<hr>
+
+## Object Oriented Programming:
+
+- `User.ancestors` _Inheritance, all super classes of user._
+- `@name` _Instance variable, exists with object._
+- `module Modulable` _Naming convention ends with "able"._
+    
+<br>
+
+```
+def module_method(object)
+    end
+end
+```
+
+<br>
+
+_Each object can use instance methods in the class._
+
+```
+class User
+
+    def initialize(name)
+         @name = name
     end
 
-    class User
-      def initialize(name)
-        @name = name
-      end
-
-      # each object can use instance methods in the class
-
-      # getter method
-      def get_name
+    _Getter method
+    def get_name
         @name
-      end
-
-      # setter method
-      def set_name=(name)
-        @name = name
-      end
     end
+
+    _Setter method
+    def set_name=(name)
+        @name = name
+    end
+end
+```
 
 user = User.new("Name")
 user.get_name #=> Name
