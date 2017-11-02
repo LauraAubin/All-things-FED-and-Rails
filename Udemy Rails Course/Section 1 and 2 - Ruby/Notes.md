@@ -172,33 +172,52 @@ class User
 end
 ```
 
+```
 user = User.new("Name")
-user.get_name #=> Name
-user.set_name = "Name" #=> Name
+user.get_name
+```
+Returns `Name`.
 
-    # or let Ruby setup the getters and setters:
-    class User
-      include Modulable
-      attr_acessor :name
+```
+user.set_name = "Name"
+```
+Returns `Name`.
 
-      def initialize(name)
-        @name = name
-      end
+<br>
 
-      def self.class_method # Define a class method, does not need an object to run
-      end
-    end
+**Or let Ruby setup the getters and setters:**
 
+```
+class User
+   include Modulable
+   attr_acessor :name
+
+   def initialize(name)
+      @name = name
+   end
+
+   def self.class_method
+   end
+end
+```
+
+`def self.class_method` defines a class method, does not need an object to run.
+
+<br>
+
+```
 user = User.new("Name")
-user.name #=> Name
-user.name = "Name" #=> Name
-user.class_method # calls method
-user.module_method # accessible from user because of the "include"
+user.name
+```
+Returns `Name`.
 
+`user.name` = "Name"
+`user.class_method` _calls method._
+`user.module_method` _accessible from user because of the "include"._
 
-# -------------------------------------------
-# SPLAT OPERATOR *
-# -------------------------------------------
+<hr>
+
+## SPLAT OPERATOR *
 
   # DEFINE SPLAT IN A METHOD
 
