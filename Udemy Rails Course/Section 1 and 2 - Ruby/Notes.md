@@ -219,61 +219,90 @@ Returns `Name`.
 
 ## SPLAT OPERATOR *
 
-  # DEFINE SPLAT IN A METHOD
+**Gather up remaining arguments:**
 
-  # Gather up remaining arguments
-  def say(what, *thing)
-    thing.each{ |x| puts "#{x}: #{what}" }
-  end
-  say "Hello", "1", "2", "3"
-  # 1: Hello
-  # 2: Hello
-  # 3: Hello
+```
+def say(what, *thing)
+   thing.each{ |x| puts "#{x}: #{what}" }
+end
+say "Hello", "1", "2", "3"
+```
+Returns:
+`1: Hello`
+`2: Hello`
+`3: Hello`
 
-  # Using a hash and a splat at the beginning of the argument list
-  # Needs a hash passed in at the end
-  def method(*args, opts)
-    puts "arguments: #{args} & options: #{opts}"
-  end
-  method 1, 2, 3, :a=>4 #=> arguments: [1, 2, 3] & options: {:a=>4}
+<br>
 
-  def method(a, b, *)
-    puts "#{a} and #{b}"
-  end
-  method 1, 2, 3 #=> 1 and 2
+**Using a hash and a splat at the beginning of the argument list:**
+- Needs a hash passed in at the end
 
-  # CALLING METHODS
-  array = ["1", "2", "3"]
-  say *array
-  # 1
-  # 2
-  # 3
+```
+def method(*args, opts)
+  puts "arguments: #{args} & options: #{opts}"
+end
+```
+`method 1, 2, 3, :a=>4`
+arguments: [1, 2, 3] & options: {:a=>4}
 
-  def method(a, b)
-    a + b
-  end
-  pair = [3, 7]
-  method *pair #=> 10
+<br>
 
-  # ARRAY DESTRUCTURING
-  first, *list = [1,2,3,4] # first = 1, list = [2,3,4]
-  *list, last = [1,2,3,4] # list = [1,2,3], last = 4
-  first, *center, last = [1,2,3,4] # first = 1, center = [2,3], last = 4
+```
+def method(a, b, *)
+  puts "#{a} and #{b}"
+end
+```
+`method 1, 2, 3 #=> 1 and 2`
 
-  _, *unquoted, _ = '"quoted"'.split(//)
-  unquoted.join # quoted
+<br>
 
+**CALLING METHODS:**
 
-  # ARRAY COERCION
-  "hello".to_a #=> cannot convert string to array
-  a = *"hello" #=> ["hello"]
-  a = *(1..3) #=> [1, 2, 3]
-  a = *[1,2,3] #=> [1, 2, 3]
+```
+array = ["1", "2", "3"]
+say *array
+```
+Returns: `1` `2` `3`.
 
+<br>
 
-# -------------------------------------------
-# JSON
-# -------------------------------------------
+```
+def method(a, b)
+   a + b
+end
+```
+`pair = [3, 7]`
+`method *pair` 
+Returns `10`.
+
+<br>
+
+**ARRAY DESTRUCTURING:**
+
+`first, *list = [1,2,3,4]`<br>
+Returns `first = 1`, `list = [2,3,4]`.<br>
+`*list, last = [1,2,3,4]`<br>
+Returns `list = [1,2,3]`, `last = 4`.<br>
+`first, *center, last = [1,2,3,4]`<br>
+Returns `first = 1`, `center = [2,3]`, `last = 4`.<br>
+
+<br>
+
+`_, *unquoted, _ = '"quoted"'.split(//)`<br>
+`unquoted.join` quoted
+
+<br>
+
+**ARRAY COERCION:**
+
+`"hello".to_a` cannot convert string to array.<br>
+`a = *"hello"` ["hello"].<br>
+`a = *(1..3)` [1, 2, 3].<br>
+`a = *[1,2,3]` [1, 2, 3].<br>
+
+<hr>
+
+## JSON
 
 # Inside a file named 'user_permissions_template.json'
 {"accounts": "read",
