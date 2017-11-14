@@ -136,3 +136,13 @@ Solution:
 
 - Put `published_groups` of type OfferGroup in an array to [make it enumerable](https://github.com/ShopifyFRS/bourgeois/pull/3361/files#diff-3d8a4e51deeec5e0d5e4aa218f9253b6R14) like `[published_groups]`.
 
+<hr>
+
+**Take:**
+
+`Object.take` _returns object from_ <sup>`SELECT * FROM people LIMIT 1`.</sup><br>
+`Object.take(5)` _returns 5 objects from_ <sup>`SELECT * FROM people LIMIT 5`.</sup><br>
+
+`Person.where(["name LIKE '%?'", name]).take` _object specificity_.
+
+- Returns records without order. Order depends on DB implementation. If order is supplied, this order takes effect.
