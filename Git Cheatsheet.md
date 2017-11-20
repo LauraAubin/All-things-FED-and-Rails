@@ -45,7 +45,7 @@ or,
 - `git fetch origin master`
 - `git rebase -i origin/master`
 - `git push origin +your_branch_name`<br>
-or 
+or
 - `git push origin head`
 
 <hr>
@@ -102,7 +102,7 @@ To make someone an admin:
 - `heroku run rails console --app shopify-[name of app]`
 - `user=User.find_by(email:"firstName.LastName@shopify.com")`
 - `user.is_admin=true`
-- `user.save` 
+- `user.save`
 
 To access the production database:
 - Login to Shopify
@@ -117,21 +117,3 @@ To access the production database:
 
 **See hidden files:**
 - `ls -la`
-
-<hr>
-
-**Test all files:**
-- `dev test` usually works, but sometimes it only tests files that have been edited.
-- `dev test -a` will test all files anyways.
-
-<hr>
-
-**Run an individual test:**
-
-`dev test [/file directory] --name /[test_name_with_underscores]/`
-
-<hr>
-
-**To quickly navigate to a Rails app page:**<br>
-<sup>Make sure the server is running.</sup>
-- `dev open app` This will launch a new browser window.
