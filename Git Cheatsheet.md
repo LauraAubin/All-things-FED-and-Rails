@@ -45,7 +45,7 @@ or,
 - `git fetch origin master`
 - `git rebase -i origin/master`
 - `git push origin +your_branch_name`<br>
-or 
+or
 - `git push origin head`
 
 <hr>
@@ -102,11 +102,7 @@ To make someone an admin:
 - `heroku run rails console --app shopify-[name of app]`
 - `user=User.find_by(email:"firstName.LastName@shopify.com")`
 - `user.is_admin=true`
-- `user.save` 
-
-To access the production database:
-- Login to Shopify
-- `heroku run rails console --app u2-cedar --sandbox` _u2 sandbox example_.
+- `user.save`
 
 <hr>
 
