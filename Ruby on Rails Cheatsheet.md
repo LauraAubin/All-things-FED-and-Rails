@@ -146,3 +146,12 @@ Solution:
 `Person.where(["name LIKE '%?'", name]).take` _object specificity_.
 
 - Returns records without order. Order depends on DB implementation. If order is supplied, this order takes effect.
+
+<hr>
+
+**Brute force testing:**
+
+`render json { "hello world" => 6 }`<br>
+`return`
+
+The call to render overrides the normal rails rendering, then return immediately otherwise you get a double-render failure.
