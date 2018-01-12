@@ -1,6 +1,6 @@
 ## Cheatsheet links:
 - [**Rails code references**](https://github.com/LauraAubin/All-things-FED-and-Rails/blob/master/Ruby%20on%20Rails%20Cheatsheet.md)
-- [**Dev cheat sheet**](https://github.com/LauraAubin/All-things-FED-and-Rails/blob/617f921748387bc0213afd9f326a6065b3ede02f/Dev%20Cheatsheet.md)
+- [**Dev cheat sheet**](https://github.com/LauraAubin/All-things-FED-and-Rails/blob/master/Dev%20Cheat%20sheet.md)
 - [**Git cheat sheet**](https://github.com/LauraAubin/All-things-FED-and-Rails/blob/master/Git%20Cheatsheet.md)
 - [**Markdown**](https://github.com/LauraAubin/All-things-FED-and-Rails/blob/master/Markdown%20Cheatsheet.md)
 <hr>
