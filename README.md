@@ -33,5 +33,5 @@
 
 **W3schools: Javascript**
 
-<sup>Find the online tutorial [here](https://www.w3schools.com/js/default.asp)</sup>
-<sup>[Go to this section]()
+<sup>Find the online tutorial [here](https://www.w3schools.com/js/default.asp)</sup><br>
+<sup>[Go to this section](https://github.com/LauraAubin/All-things-FED-and-Rails/blob/master/w3schools/Javascript.md)
