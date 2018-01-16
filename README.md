@@ -28,3 +28,10 @@
 
 <sup>Find the online course [here](https://courses.edx.org/courses/course-v1:W3Cx+HTML5.0x+1T2017/course/)</sup>   
 <sup>[Go to this section](https://github.com/LauraAubin/All-things-FED-and-Rails/tree/master/edX-%20HTML5%20and%20CSS)
+
+<br>
+
+**W3schools: Javascript**
+
+<sup>Find the online tutorial [here](https://www.w3schools.com/js/default.asp)</sup>
+<sup>[Go to this section]()
