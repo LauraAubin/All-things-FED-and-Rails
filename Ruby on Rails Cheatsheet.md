@@ -155,3 +155,27 @@ Solution:
 `return`
 
 The call to render overrides the normal rails rendering, then return immediately otherwise you get a double-render failure.
+
+<hr>
+
+**Includes:**
+
+Used for specifying relationships to be included in the result set. Allows access to attributes without an additional query.
+
+Includes the address and name attributes in the users result:
+
+```
+users = User.includes(:address, :name)
+```
+
+Nesting using a hash:
+
+```
+users = User.includes(:address, friends: [:address, :followers])
+```
+
+Conditions need to be referenced:
+
+```
+User.includes(:posts).where('posts.name = ?', 'example').references(:posts)
+```
