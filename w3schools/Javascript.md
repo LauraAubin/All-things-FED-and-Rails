@@ -1,6 +1,6 @@
 ## Javascript
 
-**Button that displays the date:**
+**Changing elements with a button click:**
 
 - Find an element with the `id:"demo"`
 - Change content to `Date()`
@@ -26,3 +26,20 @@ document.getElementById("demo").style.display = "block";
 
 <hr>
 
+**Invoke function with a button click:**
+
+```
+<button type="button" onclick="myFunction()">Try it</button>
+```
+
+```
+function myFunction(){
+    document.getElementById("demo").innerHTML = "Paragraph changed.";
+}
+```
+
+You can also store the function in a separate file, so long as you source it. The script will act as if it were located here:
+
+```
+<script src="myScript.js"></script>
+```
