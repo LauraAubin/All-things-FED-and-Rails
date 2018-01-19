@@ -179,3 +179,32 @@ Conditions need to be referenced:
 ```
 User.includes(:posts).where('posts.name = ?', 'example').references(:posts)
 ```
+
+<hr>
+
+**Calling a controller method with a button:**
+
+`html.erb`:
+
+```
+<%= button_to "Action", route_path, method: :patch, class: "btn btn-success" %>
+```
+
+`Rake routes` can give you the route path.
+
+`routes`:
+
+```
+resources :thing, only: [:show] do
+      member do
+        patch :action_name
+      end
+end
+```
+
+`controller`:
+
+```
+def action_name
+end
+```
