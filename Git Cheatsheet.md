@@ -124,8 +124,8 @@ To make someone an admin:
 
 **Run an individual test:**
 
-`dev test [/file directory] --name /[test_name_with_underscores]/`
-Example:
+`dev test [/file directory] --name /[test_name_with_underscores]/`<br><br>
+Example:<br>
 `dev test test/file.rb -n /#do_the_thing/`
 
 <hr>
