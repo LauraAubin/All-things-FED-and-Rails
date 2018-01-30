@@ -208,3 +208,14 @@ end
 def action_name
 end
 ```
+
+<hr>
+
+**Multi-line comments in Ruby:**
+
+Can be used with any identifier, so long as you close it.
+```
+<<-Identifier
+  I am a comment
+Identifier
+```
