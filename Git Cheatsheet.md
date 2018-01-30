@@ -26,6 +26,13 @@
 
 <hr>
 
+**Local branch out of date with pushed branch:**
+
+- Checkout your branch
+- `git pull origin your_branch_name`
+
+<hr>
+
 **Add more changes to an existing pushed commit:**<br>
 <sup>This will not appear as a new commit.</sup><br>
 - `git commit --amend --no-edit`
