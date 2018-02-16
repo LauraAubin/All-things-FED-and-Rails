@@ -9,6 +9,8 @@
 **Run an individual test:**
 - `dev test [/file directory] --name /[test_name_with_underscores]/`
 
+- You can also just specify a line number like `dev test file_directory:100`.
+
 <hr>
 
 **To quickly navigate to a Rails app page: **
