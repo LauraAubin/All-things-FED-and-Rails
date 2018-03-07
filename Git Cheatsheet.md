@@ -140,3 +140,9 @@ Example:<br>
 **To quickly navigate to a Rails app page:**<br>
 <sup>Make sure the server is running.</sup>
 - `dev open app` This will launch a new browser window.
+
+<hr>
+
+**Checkout a branch from a previous date:**
+
+`git checkout 'master@{2018-02-26 18:30:00}'`
