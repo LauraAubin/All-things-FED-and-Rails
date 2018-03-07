@@ -135,6 +135,10 @@ To make someone an admin:
 Example:<br>
 `dev test test/file.rb -n /#do_the_thing/`
 
+Even better:
+
+`dev test [/file directory]:line_number`
+
 <hr>
 
 **To quickly navigate to a Rails app page:**<br>
