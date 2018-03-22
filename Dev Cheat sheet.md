@@ -22,3 +22,15 @@
 **Open Atom from terminal: **
 - Navigate to the folder for your repo.
 - `Atom .`
+
+<hr>
+
+**Setting up dev with zsh:**
+- To use the dev tool in iTerm for zsh:
+- `vim ~/.zshrc`
+- Paste the following:
+
+```
+[ -f /opt/dev/dev.sh ] && source /opt/dev/dev.sh
+ prompt_context () { }
+ ```
