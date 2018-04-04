@@ -1,5 +1,7 @@
 # Markdown:
 
+You can view the markdown of a file in Atom by typing: `control + shift + m`.
+
 <kbd>Borders</kbd>
 
 >Quotes
