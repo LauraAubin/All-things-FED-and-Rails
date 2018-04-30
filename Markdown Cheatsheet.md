@@ -28,5 +28,9 @@ You can view the markdown of a file in Atom by typing: `control + shift + m`.
 
 **Set width/height of images:**
 
+```
+<img src="image_url" width="400" height="150" />
+```
+
 <kbd><img src="https://user-images.githubusercontent.com/22782157/28597052-d5af62ae-7169-11e7-9368-00ac8aac281c.jpg" width="400" height="150" /></kbd>
 
