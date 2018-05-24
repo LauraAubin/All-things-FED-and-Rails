@@ -34,6 +34,7 @@
 **Udemy: React 16 - The Complete Guide (incl. React Router 4 & Redux)**
 
 <sup>Find the online course [here](https://www.udemy.com/react-the-complete-guide-incl-redux/learn/v4/overview)</sup>   
+<sup>[Go to this section](https://github.com/LauraAubin/All-things-FED-and-Rails/tree/master/Udemy%20React%20Course)</sup>
 
 <br>
 
