@@ -31,6 +31,12 @@
 
 <br>
 
+**Udemy: React 16 - The Complete Guide (incl. React Router 4 & Redux)**
+
+<sup>Find the online course [here](https://www.udemy.com/react-the-complete-guide-incl-redux/learn/v4/overview)</sup>   
+
+<br>
+
 **W3schools: Javascript**
 
 <sup>Find the online tutorial [here](https://www.w3schools.com/js/default.asp)</sup><br>
