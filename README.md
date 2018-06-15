@@ -1,8 +1,9 @@
-## Cheatsheet links:
-- [**Rails code references**](https://github.com/LauraAubin/All-things-FED-and-Rails/blob/master/Ruby%20on%20Rails%20Cheatsheet.md)
-- [**Dev cheat sheet**](https://github.com/LauraAubin/All-things-FED-and-Rails/blob/master/Dev%20Cheat%20sheet.md)
-- [**Git cheat sheet**](https://github.com/LauraAubin/All-things-FED-and-Rails/blob/master/Git%20Cheatsheet.md)
-- [**Markdown**](https://github.com/LauraAubin/All-things-FED-and-Rails/blob/master/Markdown%20Cheatsheet.md)
+## Cheat sheet links:
+- [**Rails code references**](https://github.com/LauraAubin/All-things-FED-and-Rails/blob/master/Ruby%20on%20Rails%20cheat%20sheet.md)
+- [**Dev cheat sheet**](https://github.com/LauraAubin/All-things-FED-and-Rails/blob/master/Dev%20cheat%20sheet.md)
+- [**Git cheat sheet**](https://github.com/LauraAubin/All-things-FED-and-Rails/blob/master/Git%20cheat%20sheet.md)
+- [**CSS cheat sheet**](https://github.com/LauraAubin/All-things-FED-and-Rails/blob/master/CSS%20cheat%20sheet.md)
+- [**Markdown**](https://github.com/LauraAubin/All-things-FED-and-Rails/blob/master/Markdown%20cheat%20sheet.md)
 <hr>
 
 # Learn-Rails
