@@ -21,6 +21,6 @@ Patterns:
 
 `padding: A B` is equivalent to `padding: A B A B`<br>
 
-`padding: A B C` is equivalent to `padding: A B C D`
+`padding: A B C` is equivalent to `padding: A B C B`
 
 <hr>
