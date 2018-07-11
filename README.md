@@ -43,3 +43,9 @@
 
 <sup>Find the online tutorial [here](https://www.w3schools.com/js/default.asp)</sup><br>
 <sup>[Go to this section](https://github.com/LauraAubin/All-things-FED-and-Rails/blob/master/w3schools/Javascript.md)
+
+<hr>
+
+# Resources
+
+- [React Resources](https://github.com/LauraAubin/All-things-FED-and-Rails/blob/master/Resources/React%20Resources/React%20Resources.md)
