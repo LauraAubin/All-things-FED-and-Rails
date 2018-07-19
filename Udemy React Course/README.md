@@ -10,3 +10,6 @@ Some of the sections are too small or too repetitive so there are no notes for t
 
 ## Base Features & Syntax
 - **[Creating a React App](https://github.com/LauraAubin/All-things-FED-and-Rails/blob/master/Udemy%20React%20Course/Notes/3.1.md)**
+- **[How JSX Gets Compiled](https://github.com/LauraAubin/All-things-FED-and-Rails/blob/master/Udemy%20React%20Course/Notes/3.2.md)**
+- **[Creating a Functional Component](https://github.com/LauraAubin/All-things-FED-and-Rails/blob/master/Udemy%20React%20Course/Notes/3.3.md)**
+- **[Props & Children](https://github.com/LauraAubin/All-things-FED-and-Rails/blob/master/Udemy%20React%20Course/Notes/3.4.md)**
